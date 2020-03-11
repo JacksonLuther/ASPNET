@@ -1,4 +1,9 @@
 ﻿@model IEnumerable<Product>
+<style>
+    .button-borders{
+        border-radius: 3.75;
+    }
+</style>
 
 <h1>Products</h1>
 <table class="table table-bordered">
@@ -13,7 +18,7 @@
     @foreach (var product in Model)
     {
      <tr>
-        <td><button style="border-radius: 3.75px;"><a href=/Product/ViewProduct/@product.ProductID>@product.ProductID</a></button></td>
+        <td><button class="button-borders"><a href=/Product/ViewProduct/@product.ProductID>@product.ProductID</a></button></td>
         <td>@product.Name</td>
         <td>@product.Price</td>
         <td>@product.CategoryID</td>
